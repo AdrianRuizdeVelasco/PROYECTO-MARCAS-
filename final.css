@@ -1,0 +1,1306 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+} 
+body{
+    background-color: azure;
+}
+
+header{
+    background-color: azure;
+    /* background-color: rgb(19, 19, 179); */
+    width: 100%;
+    height: 11%;
+    z-index: 2;
+    top: 0px;
+
+}
+
+
+
+.menu3{
+    display: none;
+}
+
+/* DESDE AQUI ES PARTE DE LA PAGINA INDEX */
+.imagen_movimiento{
+    width: 100%;
+    height: 550px;
+    background-image: url(img/concesionario/concesionario1.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% ;
+    animation: movimiento 10s infinite linear alternate;
+}
+@keyframes movimiento {
+    from{
+        background-position: bottom left;
+    }
+    to{
+        background-position: top;
+    }
+}
+ 
+main{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+   margin-top: 15%;
+    /* background-image: url(img/back2.jpg);
+    background-repeat: none;
+    background-size: 100% 100%; */
+}
+
+ .card{
+    width: 400px;
+    margin: 10px;
+    transition: all 300ms ;
+    margin-top: 2%;
+    
+    
+}
+.card:hover{
+    transform: scale(1.1);
+    filter: drop-shadow(5px 5px 4px rgba(0,0,1,1));
+}
+main >.card  .cover{
+    width: 100%;
+    height: 250px;
+    position: relative;
+    overflow: hidden;
+}
+main >.card .cover img{
+    height: 250px;
+    display: block;
+    margin: auto;
+    top: 40px;
+    z-index: 1;
+    
+    transition: all 400ms;
+}
+main >.card:hover  .cover img{
+    top:0px;
+    filter: none;
+}
+main >.card .img_back{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-size: cover;
+    border-radius:20px 20px 0px 0px;
+    z-index: -1;
+}
+.card .description{
+    
+    margin-top: -10px ;
+    padding: 20px;
+    border-radius:0px 0px 20px 20px ;
+}
+.card .description p{
+    margin-top: 10px;
+}
+.card .description input{
+    padding: 10px 40px ;
+    margin-top: 20px;
+    border: none;
+    background: #A6359D;
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: all 300ms ;
+
+}
+.card > .cover > .cover_img{
+    width: 100%;
+}
+.card:hover > .description{
+    background-color: rgba(240, 248, 255, 0.959);
+}
+.description > h2 , .description > p{
+    font-family: 'Ubuntu', sans-serif;
+} 
+ /* AQUI TERMINA LA  PARTE DE LA PAGINA INDEX */
+
+
+ /* TODO LO DE ABAJO ES PARA EL RESPONISVE DEL MENU*/
+
+
+
+@media screen and (max-width: 2560px ){
+   
+    .logo ,.logo_menu2{
+        display: none;
+    }
+    .burguer{
+        display: none;
+    }
+    .menu3{
+        width: 100%;
+        display: inline-flex;
+        justify-content: space-between;
+    }
+    .menu3_logos{
+        opacity: 0.7;
+        margin-top: 18%;
+        height: 70px;
+        width: 70px;
+    }
+    .menu3_logos:hover{
+        opacity: 1;
+        transform: scale(1.3);
+    }
+    .menu3_text{
+        display: flex;
+        align-self: center;
+        font-family: 'Ubuntu', sans-serif;
+       color: grey;
+       font-size: 100%;
+    }
+    .menu2{
+        width: 100%;
+        height: 200px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-left: 2vw;
+}
+.cont-ul{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+}
+.menu2 li{
+    list-style: none;
+    /* quita los puntitios */
+    cursor: pointer;
+    /* pone la manita */
+    padding: 1.5vw;
+     /* la separacion depende del 1.5 % de la anchura de la pantalla */
+    transition: all 0.3s ease 0s;
+    /* que la animacion sea para todos los li con una duracion de 0.3s que desde la mano hasta que el color este y que sea normal que el color vaya despacito */
+
+ }
+.ul-second{
+    display: none;
+    /* no dependen de ninguna caja */
+    position: absolute;
+    /* es que depende del elemento padre */
+    margin-top: 1.5vw;
+    /* la posicion absolute y le margin sirve para que podamos bajarloy mostrarlo */
+}
+.ul-second >li {
+        width: 150px;
+        transform: translateX(-20px);
+        /* el eje vertical es la x */
+        border-bottom: 1px solid grey ;
+        text-align: center;
+        background-color: azure;
+}
+.menu2{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 2vw;
+    background-color: azure;
+}
+.vehiculo:hover > .ul-second{
+    display: block;
+    /* esto srive para que cuando pasemos la mano el conjunto de la lista ul-second salga como bloque */
+}
+.cont-ul{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.menu2 li{
+list-style: none;
+/* quita los puntitios */
+cursor: pointer;
+/* pone la manita */
+padding: 1.5vw;
+ /* la separacion depende del 1.5 % de la anchura de la pantalla */
+transition: all 0.3s ease 0s;
+/* que la animacion sea para todos los li con una duracion de 0.3s que desde la mano hasta que el color este y que sea normal que el color vaya despacito */
+
+}
+.ul-second{
+display: none;
+/* no dependen de ninguna caja */
+position: absolute;
+/* es que depende del elemento padre */
+margin-top: 1.5vw;
+/* la posicion absolute y le margin sirve para que podamos bajarloy mostrarlo */
+}
+.ul-second >li {
+    width: 150px;
+    transform: translateX(-20px);
+    /* el eje vertical es la x */
+    border-bottom: 1px solid grey ;
+    text-align: center;
+    background-color: azure;
+}
+.a_menu2{
+text-decoration: none;
+font-family: 'Ubuntu', sans-serif;
+color: grey;
+font-size: 100%;
+
+}
+#logo_vehiculo{
+    display: flex;
+    }
+    .logo_menu2{
+        width: 80px;
+        display: flex;
+    }
+
+
+}
+@media screen  and (max-width: 1440px){
+    
+   
+    .logo ,.logo_menu2{
+        display: none;
+    }
+    .burguer{
+        display: none;
+    }
+    .menu3{
+        width: 100%;
+        display: inline-flex;
+        justify-content: space-between;
+    }
+    .menu3_logos{
+        opacity: 0.7;
+        margin-top: 18%;
+        height: 70px;
+        width: 70px;
+    }
+    .menu3_logos:hover{
+        opacity: 1;
+        transform: scale(1.3);
+    }
+    .menu3_text{
+        display: flex;
+        align-self: center;
+        font-family: 'Ubuntu', sans-serif;
+       color: grey;
+       font-size: 100%;
+    }
+    .menu2{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-left: 2vw;
+}
+.cont-ul{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+}
+.menu2 li{
+    list-style: none;
+    /* quita los puntitios */
+    cursor: pointer;
+    /* pone la manita */
+    padding: 1.5vw;
+     /* la separacion depende del 1.5 % de la anchura de la pantalla */
+    transition: all 0.3s ease 0s;
+    /* que la animacion sea para todos los li con una duracion de 0.3s que desde la mano hasta que el color este y que sea normal que el color vaya despacito */
+
+ }
+.ul-second{
+    display: none;
+    /* no dependen de ninguna caja */
+    position: absolute;
+    /* es que depende del elemento padre */
+    margin-top: 1.5vw;
+    /* la posicion absolute y le margin sirve para que podamos bajarloy mostrarlo */
+}
+.ul-second >li {
+        width: 150px;
+        transform: translateX(-20px);
+        /* el eje vertical es la x */
+        border-bottom: 1px solid grey ;
+        text-align: center;
+        background-color: azure;
+}
+.menu2{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 2vw;
+    background-color: azure;
+}
+.vehiculo:hover > .ul-second{
+    display: block;
+    /* esto srive para que cuando pasemos la mano el conjunto de la lista ul-second salga como bloque */
+}
+.cont-ul{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.menu2 li{
+list-style: none;
+/* quita los puntitios */
+cursor: pointer;
+/* pone la manita */
+padding: 1.5vw;
+ /* la separacion depende del 1.5 % de la anchura de la pantalla */
+transition: all 0.3s ease 0s;
+/* que la animacion sea para todos los li con una duracion de 0.3s que desde la mano hasta que el color este y que sea normal que el color vaya despacito */
+
+}
+.ul-second{
+display: none;
+/* no dependen de ninguna caja */
+position: absolute;
+/* es que depende del elemento padre */
+margin-top: 1.5vw;
+/* la posicion absolute y le margin sirve para que podamos bajarloy mostrarlo */
+}
+.ul-second >li {
+    width: 150px;
+    transform: translateX(-20px);
+    /* el eje vertical es la x */
+    border-bottom: 1px solid grey ;
+    text-align: center;
+    background-color: azure;
+}
+.a_menu2{
+text-decoration: none;
+font-family: 'Ubuntu', sans-serif;
+color: grey;
+
+}
+#logo_vehiculo{
+    display: flex;
+    }
+    .logo_menu2{
+        width: 80px;
+        display: flex;
+    }
+
+
+
+}
+@media screen and (max-width: 1024px ){
+    .imagen_movimiento{
+        display: none;
+    }
+    #logo_vehiculo{
+        display: flex;
+        }
+        .logo_menu2{
+            width: 80px;
+            display: flex;
+        }
+    .menu3_text{
+    display: none;
+}
+}
+@media screen and (max-width: 768px ){
+    .imagen_movimiento{
+        display: none;
+    }
+    .logo{
+        display: none;
+    }
+    .menu3{
+        display: none;
+    }
+    .logo_menu2{
+        width: 80px;
+        display: flex;
+    }
+    .burguer{
+        display: none;
+    }
+   
+    .vehiculo{
+        position: relative;
+        /* que los elemtos de la caja su punto cero de referencia es la caja donde estan  */
+        text-decoration: none;
+       font-family: 'Ubuntu', sans-serif;
+       color: grey;
+       
+   
+    }
+    .vehiculo > li  {
+        text-decoration: none;
+    }
+    .vehiculo:hover > .ul-second{
+        display: block;
+        /* esto srive para que cuando pasemos la mano el conjunto de la lista ul-second salga como bloque */
+    }
+    .menu2{
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding-left: 2vw;
+    }
+    .cont-ul{
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+    }
+    .menu2 li{
+        list-style: none;
+        /* quita los puntitios */
+        cursor: pointer;
+        /* pone la manita */
+        padding: 1.5vw;
+         /* la separacion depende del 1.5 % de la anchura de la pantalla */
+        transition: all 0.3s ease 0s;
+        /* que la animacion sea para todos los li con una duracion de 0.3s que desde la mano hasta que el color este y que sea normal que el color vaya despacito */
+    
+     }
+    .ul-second{
+        display: none;
+        /* no dependen de ninguna caja */
+        position: absolute;
+        /* es que depende del elemento padre */
+        margin-top: 1.5vw;
+        /* la posicion absolute y le margin sirve para que podamos bajarloy mostrarlo */
+    }
+    .ul-second >li {
+            width: 150px;
+            transform: translateX(-20px);
+            /* el eje vertical es la x */
+            border-bottom: 1px solid grey ;
+            text-align: center;
+            background-color: azure;
+    }
+    #logo_vehiculo{
+        display: flex;
+        }
+
+
+
+
+    .a_menu2{
+            text-decoration: none;
+            font-family: 'Ubuntu', sans-serif;
+            color: grey;
+
+    }
+}
+@media screen and (max-width: 425px ){
+    .imagen_movimiento{
+        display: none;
+    }
+    .menu3{
+        display: none;
+    }
+    header{
+        width: 100%;
+        height: 12%;
+        display: flex;
+        justify-content: space-around;
+       
+    }
+    .a_logo{
+        width: 50%; 
+    }
+    .logo{
+        width: 60%;
+        margin-top: 2%;
+        display: flex;
+    }
+    .change .logo{
+        position: absolute;
+    }
+    .menu2{
+        display: none;
+    }
+    .burguer{
+        display: inline-block;
+        cursor: pointer;
+        width: 50%; 
+        margin-top: 10%;
+      }
+      .bar1, .bar2, .bar3 {
+        width: 35px;
+        height: 5px;
+        background-color: #333;
+        margin: 6px 0;
+        transition: 0.4s;
+        margin-left: 50%;
+      }
+      
+      .change .bar1 {
+        transform: rotate(-45deg) translate(-9px, 6px);
+      }
+      .change .bar2 {
+          opacity: 0;
+        }
+      .change .bar3 {
+        transform: rotate(45deg) translate(-8px, -8px);
+      }
+      nav{
+        display: flex;
+        position: fixed;
+        left: -200%;
+        top: 12%;
+        flex-direction: column;
+        background-color: azure;
+        width: 100%;
+        text-align: CENTER;
+        transition: 0.3S;
+
+    }
+    .change nav{
+        left: 0;
+    }
+    .ul_burguer{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-right: 5%;
+        margin-left: 5%;
+
+    }
+    .menu_burguer{
+     list-style: none;
+    }
+    .a_burguer{
+        color: grey;
+        text-decoration: none;
+        font-family: 'Ubuntu', sans-serif;
+        font-size: 80%;
+    }
+    .change nav{
+        display: flex;
+    }
+    .menu_item{
+        margin: 1vh;
+    }
+
+    .imagen_movimiento{
+        width: 100%;
+        height: 450px;
+    }
+
+    .capa{
+        width: 100%;
+        height: 100%;
+        background-image: url(img/concesionario/concesionario1.jpg);
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        animation: opacidad 10s infinite  alternate;
+    }
+    @keyframes opacidad {
+        from{
+            background-position: 0%;
+            opacity: 1;
+        }
+        to{
+            background-position: 0%;
+            opacity: 0;
+        }
+    }
+}
+@media screen and (max-width: 320px ){
+    .imagen_movimiento{
+        display: none;
+    }
+    .logo{
+        width: 80%;
+        margin-top: 2%;
+        display: flex;
+    }
+    .menu3{
+        display: none;
+    }
+
+    /* ESTO ES PARA EL MAIN DEL INDEX */
+    .imagen_movimiento{
+        display: none;
+    }
+    main{
+        width: 100%;
+    }
+    .card{
+        width: 80%;
+        margin: 10px;
+        transition: all 300ms ;
+        margin-top: 2%;
+        
+        
+    }
+    
+}
+/* FINAL DE LA PAGINA INDEX Y MENU */
+/* PRINCIPIO DE LAS PAGINAS COCHES */
+/*afecta a todo el documento*/
+@font-face {
+    font-family: "harmony";
+    src: url(fuente/Sansation_Bold.ttf);
+}
+
+
+.general_container{
+    justify-content: center;
+    
+}
+
+#wrapper {
+    background: azure;
+    width: 70%;
+    height: 350px;
+    margin-left: 15%;
+    margin-top: 3%;
+    text-align: center;
+    color: #000;
+    font-weight: bold;
+    font-size: 5em;
+    padding: 30px 10px;
+    border: double 20px goldenrod;
+    border-radius: 15px;
+    display: block;
+  }
+  
+  span { 
+    text-shadow: -0.06em 0 red,  0.06em 0 cyan; /*Crea un efecto 3D , si te pones unas gafas
+    de esas de cartón casi casi lo podrás tocar.. */
+    letter-spacing: 0.08em; /*distancia entre las letras porque no llevan mascarilla..*/
+  }
+  
+  p {
+    margin: 0;
+  }
+  
+  /* Efecto estrellas */
+  
+  #stars span {
+    display: inline-block;
+    transform: scale(1);
+    transition: transform 2s cubic-bezier(0, 1, 0, 1);
+  }
+  #stars span:hover {
+    cursor: crosshair;
+    transform: scale(1.3); /*aumenta con el hover*/
+    transition: transform .2s cubic-bezier(0, 0.75, 0, 1);
+  }
+  #stars span:active {
+    text-shadow: none; /*Si pulsas eliminas el efecto*/
+  }
+  
+  /*detrás de las estrellas*/
+  #stars span:nth-child(1), #stars span:nth-child(5) { font-size: 0.3em; animation-delay: 0.2s; }
+  #stars span:nth-child(2), #stars span:nth-child(4) { font-size: 0.5em; animation-delay: 0.1s; }
+  #stars span:nth-child(3) { font-size: 0.8em; animation-delay: 0s; }
+  
+  #stars span { animation: stars-animation 3s 50 ease-in-out; }
+  
+  @-webkit-keyframes stars-animation {
+    0% { transform: scale(1); }
+    90% { transform: scale(1); }
+    95% { transform: scale(1.3); }
+    100% { transform: scale(1); }
+  }
+  
+  #stars:hover span {
+    animation: none; /*si pulsas anulas el efecto 3d*/
+  }
+  
+  
+  /*titulo*/
+  
+  #title {
+    font-family: Helvetica, Geneva, sans-serif; 
+  }
+  #title:focus {
+    outline: none;
+  }
+  #title span {
+    vertical-align: middle;
+    line-height: 1.5em;
+    transition: font-size 2s cubic-bezier(0, 1, 0, 1);
+  }
+  #title span:hover {
+    font-size: 1.5em; /*efecto hover*/
+    line-height: 1em;
+    transition: font-size .2s cubic-bezier(0, 0.75, 0, 1);
+  }
+  #title span:active {
+    font-size: 1em;
+    text-shadow: none; /*elimina el efecto 3d*/
+  }
+  
+  
+  
+  /*Nombre de la empresa*/
+  
+  #forni { font-size: 0.25em; }
+  #forni span:active { text-shadow: none; }
+  
+  /*contenedor general de las cartas*/
+.container_cards{
+    margin-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+   
+}
+/*cada carta de cada coche*/
+.card{
+    display: inline-block;
+    background: azure;
+    border-radius: 15px;
+    border: double 20px goldenrod;
+}
+/*cuando pasas hace un pequeño efecto*/
+.card:hover{
+   
+    display: inline-block;
+    /*fpndo por si alguna foto fallase*/
+    background:url(img/focos.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100% ;
+    background-position: left;
+    /*marco tipo cromo, la idea es que parezcan cromos 
+    de coleccion, darle un toque al niño que todos 
+    llevamos dentro..*/
+    border-radius: 15px;
+    border: double 20px goldenrod;
+}
+/*contenido carta*/
+.card .cover{
+    width: 100%;
+    height: 250px;
+    position: relative;
+    overflow: hidden;
+}
+.card .cover img{
+    height: 250px;
+    width: 350px;
+    display: block;
+    margin: auto;
+    top: 40px;
+    z-index: 1;
+    filter: drop-shadow(5px 5px 4px rgba(0,0,0,0.5));
+    transition: all 400ms;
+}
+
+/*mitad de abajo de cada carta*/
+.card .description{
+    background: azure;
+    margin-top: 0px ;
+    padding: 20px 20px;
+    text-align: center; 
+    background: linear-gradient(to right, aqua, greenyellow);
+    color: rgb 99,96,96;
+}
+/*titulo abajo, cuando pasas por encima, la marca del vehiculo
+hace un efecto para desviar la atencion hacia el centro mientras los 
+huecos entre los dos margenes se rellenan del mismo color, da la sensacion 
+de que tienes que explorar mas el vehiculo*/
+.card:hover .description h2{
+    margin-top: 0px;
+    color: white;
+    background: linear-gradient(to right, darkred, gold);
+    color: rgb 99,96,96;
+    width: 200px;
+    margin-left: 20%;
+    text-align: center;
+    border-radius: 10px;
+}
+/*texto descripcion categorias*/
+.card .description p{
+    margin-top: 10px;
+    font-family: "harmony";
+    color: rgb 99,96,96;
+    background: transparent;
+    background: greenyellow;
+}
+
+/*boton de mas info.
+El cursor es una mano de Mickye Mouse!! 
+Otra vez intentamos apelar al niño interior ya que
+esa sensación se asocia con la positividad y diversión
+y así el cliente se "encariña" de nuestra web...*/
+.card .description input{
+    padding: 10px 40px ;
+    margin-top: 20px;
+    border: none;
+    background: #A6359D;
+    color: white;
+    font-size: 14px;
+    cursor: url("img/cursor.png"), progress;
+    border-radius: 8px;
+    transition: all 500ms ;
+}
+/*boton info cuando pasas por encima. tambien con un efecto
+de degradado del color a juego con los demás elementos*/
+.card .description input:hover{
+    background: linear-gradient(to left, greenyellow, gold);
+    color: blue;
+}
+/*Responsive para pantalla grande, tableta y smartphone*/
+@media screen and (max-width: 1190px){
+  #wrapper {
+     display: none;
+  }
+  .general.container{
+    width: 1000px;
+    margin-left: 10px;
+    text-align: justify;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  }
+@media screen and (max-width: 768px){
+#wrapper {
+   display: none;
+}
+.general.container{
+  width: 100%;
+  justify-content: center;
+  width: 100%;
+  height: auto;
+ 
+ 
+  
+}
+main{
+  width: 100%;
+  height: auto;
+}
+.container_cards{
+ 
+    justify-content: center;
+}
+.card{
+  width: 50%;
+  height: 11%;
+  
+ 
+}
+.card:hover{
+  width: 60%;
+  height: 11%;
+  margin: 10px;
+  display: inline-block;
+  border: double 20px goldenrod;
+  background:url(img/focos.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% 50% ;
+}
+.card .cover{
+  width: 100%;
+  height: 50%;
+  position: relative;
+  overflow: hidden;
+}
+.card .cover img{
+  height: 100%;
+  width: 100%;
+  display: block;
+  margin: auto;
+  top: 40px;
+  z-index: 1;
+  filter: drop-shadow(5px 5px 4px rgba(0,0,0,0.5));
+  transition: all 400ms;
+}
+.card .description{
+  background: azure;
+  margin-top: 0px ;
+  padding: 20px 20px;
+  text-align: center;  
+  background: linear-gradient(to right, aqua, greenyellow);
+  color: rgb 99,96,96;
+  width: 100%;
+  height: 50%;
+}
+.card .description h2{
+  margin-top: 0px;
+  
+}
+.card:hover .description h2{
+  margin-top: 0px;
+  color: white;
+  background: linear-gradient(to right, darkred, gold);
+  color: rgb 99,96,96;
+  width: 70%;
+  border-radius: 10px;
+}
+.card .description input{
+  padding: 5% 15% ;
+  margin-top: 10px;
+  border: none;
+  background: #A6359D;
+  color: white;
+  font-size: 14px;
+  cursor: url("img/cursor.png"), progress;
+  border-radius: 8px;
+  transition: all 500ms ;
+}
+}
+@media screen and (max-width: 425px ){
+  #wrapper {
+    display: none;
+ }
+ body{
+   background-color: azure;
+   background-image: none;
+ }
+ main{
+  width: 100%;
+  height: auto;
+}
+.general.container{
+  width: 100%;
+  height: 100%;
+  margin-left: 2%;
+  
+  
+}
+.card{
+  width: 90%;
+  height: 11%;
+ 
+}
+.card:hover{
+  width: 90%;
+  height: 11%;
+  margin: 10px;
+  display: inline-block;
+  border-radius: 15px;
+  border: double 20px goldenrod;
+}
+.card .cover{
+  width: 100%;
+  height: 50%;
+  position: relative;
+  overflow: hidden;
+}
+.card .cover img{
+  height: 100%;
+  width: 100%;
+  display: block;
+  margin: auto;
+  top: 40px;
+  z-index: 1;
+  filter: drop-shadow(5px 5px 4px rgba(0,0,0,0.5));
+  transition: all 400ms;
+}
+.card .description{
+  background: azure;
+  margin-top: 0px ;
+  padding: 20px 20px;
+  text-align: center;  
+  background: linear-gradient(to right, aqua, greenyellow);
+  color: rgb 99,96,96;
+  width: 100%;
+  height: 50%;
+}
+.card .description h2{
+  margin-top: 0px;
+  
+}
+.card:hover .description h2{
+  margin-top: 0px;
+  color: white;
+  background: linear-gradient(to right, darkred, gold);
+  color: rgb 99,96,96;
+  width: 70%;
+  border-radius: 10px;
+}
+.card .description input{
+  padding: 5% 15% ;
+  margin-top: 10px;
+  border: none;
+  background: #A6359D;
+  color: white;
+  font-size: 14px;
+  cursor: url("img/cursor.png"), progress;
+  border-radius: 8px;
+  transition: all 500ms ;
+}
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  /* PARTE DE FINANCIACION Y LOGIN */
+  .container_contacto{
+
+    width: 80%;
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    padding-left: 20px;
+    flex-wrap: nowrap;
+    
+ }
+ .m{
+     width: 50%;
+     height: 100%;
+     background-color: azure;
+     margin-top: 8%;
+     border-radius: 1rem;
+ }
+ .m > div{
+     margin-top: 17%;
+ }
+ .m1{
+     width: 50%;
+     height: 50%;
+     margin-left: 40%;
+     margin-top: 15%;
+     background-color: azure;
+     border-radius: 1rem;
+ }
+ .contenedor > div > .lugares{
+     width: 300px;
+     height: 200px;
+     margin-left: 40%;
+     margin-top: 15%;
+     align-content: space-between;
+ }
+ .contenedo > div > p > .registro{
+     justify-content: center;
+     font-family: Georgia, 'Times New Roman', Times, serif;
+     margin-left: 25px;
+ }
+ 
+ iframe{
+     width: 300px;
+     height: 200px;
+     display: flex;
+     justify-content: center;
+     flex-wrap: nowrap;
+ }
+ img{
+     width: 20%;
+     height: auto;
+     
+ }
+ span{
+     
+     position: center;
+ }
+ .m > div > img{
+     margin-left: 20%;
+     scale: 0.2;
+ }
+ .m > div > a > img:hover{
+     transform: scale(1.4,1.4);
+ }
+ 
+ .m > div > span{
+     margin-left: 8%;
+ }
+ /*------esto mirar----*/
+ hr{
+     width: 50%;
+     margin-left: 0%;
+ }
+ .contenedor > div > .icon{
+     width: 17%;
+     height: auto;
+ }
+ .contenedor > div > .ubicacion{
+     width: 700px;
+     height: 1000px;
+ }
+ h1{
+     text-align: center;
+ }
+ /*------esto mirar----*/
+ .button{
+     margin-left: 40%;
+     margin-top: 10%;
+     justify-content: space-between;
+ }
+ @font-face {
+    font-family: Mindcaps;
+    src: url(./fuente/Mortina\ DEMO.otf);
+}
+.fuente_Armony{
+    font-family: Mindcaps;
+    font-size: 17px;
+}
+footer{
+    margin-top: 20px;
+    background-color: #666666;
+     margin-left: -200px;
+}
+
+
+.container-footer-all{
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 30px;
+   
+}
+.container-body{
+    display: flex;
+    justify-content: space-between;
+}
+.colum1{
+    max-width: 400px;
+
+}
+.colum1 h1{
+    font-size: 25px;
+}
+.colum1 p{
+    font-size: 19px;
+    color: black ;
+    margin-top: 20px;
+    text-align: justify
+    
+}
+.colum2{
+    max-width: 400px;
+    margin-top: 8px;
+    margin-left: 200px;
+}
+.colum2 h1{
+    font-size: 22px;
+}
+ .row{
+  margin-top: 20px;
+     display: flex;
+}
+.row img{
+    width: 36px;
+    height: 36px;
+    margin-top: 12px
+}
+.row label{
+    margin-top: 10px;
+    margin-left: 20px
+    }
+.row2{
+    margin-top: 26px;
+    display: flex;
+}
+.row2 img{
+width: 36px;
+height: 36px;
+margin-top: 2px;
+display: block;
+    
+ }
+.row2 label{
+    max-width: 140px;
+    margin-top: 10px;
+    margin-left: 20px;
+}
+.colum3{
+    max-width: 400px;
+    margin-top: 8px;
+    margin-left: 200px;
+}
+.colum3 h1{
+    font-size: 22px;
+}
+.row2{
+    margin-top: 20px;
+    
+}
+.container-footer{
+    max-width: 1640px;
+    width: 100%;
+    background: #C0C0C0;
+    justify-content: space-between;
+    padding: 30px;
+    display: flex;
+    margin-top: 0px;
+ 
+}
+.information{
+color: white;
+    text-decoration: none;
+}
+.information{
+    text-decoration: none;
+    color: white;
+}
+.copyright{
+    color: white;
+    text-decoration: none;
+}
+.copyright a{
+    color: white;
+    text-decoration: none;
+}
+
+ 
+@media screen and (max-width:1024px){
+    
+     .container-body{
+        flex-wrap: wrap;
+    }
+    
+    .colum1,
+    .colum2,
+    .colum3{
+        margin-top: 40px;
+        margin-left: 3px;
+    }
+    
+     }
+@media screen and (max-width:426px){
+    
+     .container-body{
+        flex-wrap: wrap;
+    }
+    .colum1,
+    .colum2,
+    .colum3{
+        margin-top: 40px;
+        margin-left: 3px;
+    }
+    
+     }
+@media screen and (max-width:376px){
+    
+     .container-body{
+        flex-wrap: wrap;
+    }
+    
+    .colum1,
+    .colum2,
+    .colum3{
+        margin-top: 40px;
+        margin-left: 3px;
+    }
+    
+     }
